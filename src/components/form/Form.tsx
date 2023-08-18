@@ -34,7 +34,9 @@ export default function Form({
 
             <fieldset>
 
-                <div>
+                <div
+                    className={styles.char_length}
+                >
 
                     <label htmlFor='length'>
                         Character Length
@@ -46,10 +48,24 @@ export default function Form({
 
                 </div>
 
+                <div
+                    className={styles.length_bg}
+                >
+                    <div
+                        
+                        style={{
+                            height: '8px',
+                            width: (length / 20) * 100 + '%',
+                            background: 'var(--clr-teal)'
+                        }}
+                    ></div>
+                </div>
+
                 <input
                     type="range"
                     name="length"
                     id="length"
+                    className={styles.length_input}
                     value={length}
                     min={1}
                     max={20}
