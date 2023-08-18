@@ -1,5 +1,15 @@
+section {
+  width: 100%;
+  max-width: 540px;
+}
+
 .password {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-bottom: 24px;
+  padding: 16px;
+  width: 100%;
   background-color: var(--clr-dark-grey);
 }
 

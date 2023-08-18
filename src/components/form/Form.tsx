@@ -1,4 +1,5 @@
 import Button from '../button/Button'
+import StrengthMeter from '../strengthMeter/StrengthMeter'
 import styles from './form.module.css'
 
 export default function Form() {
@@ -89,30 +90,7 @@ export default function Form() {
 
             </fieldset>
 
-            <div
-                className={styles.strength_container}
-            >
-
-                <span>
-                    STRENGTH
-                </span>
-
-                <div
-                    className={styles.strength}
-                >
-
-                    <span>
-                        MEDIUM
-                    </span>
-
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-
-                </div>
-
-            </div>
+            <StrengthMeter />
 
             <Button />
 

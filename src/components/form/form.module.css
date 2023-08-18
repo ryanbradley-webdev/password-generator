@@ -1,7 +1,9 @@
 .form {
+    padding: 16px;
     background-color: var(--clr-dark-grey);
 }
 
 .form fieldset {
     display: grid;
+    border: none;
 }
