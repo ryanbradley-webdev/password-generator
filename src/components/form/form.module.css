@@ -5,6 +5,13 @@
     background-color: var(--clr-dark-grey);
 }
 
+@media screen and (min-width: 481px) {
+    .form {
+        padding: 32px;
+        padding-top: 24px;
+    }
+}
+
 .form > *:not(button) {
     margin-bottom: 16px;
 }

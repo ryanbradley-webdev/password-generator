@@ -55,7 +55,7 @@ export default function Form({
                         
                         style={{
                             height: '8px',
-                            width: (length / 20) * 100 + '%',
+                            width: (length / 20) * 98 + '%',
                             background: 'var(--clr-teal)'
                         }}
                     ></div>
