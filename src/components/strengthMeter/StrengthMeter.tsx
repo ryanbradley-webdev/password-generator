@@ -17,10 +17,7 @@ export default function StrengthMeter({
     const [strength, setStrength] = useState(1)
 
     useEffect(() => {
-        if (length < 8) {
-            return setStrength(1)
-        } else {
-            const value =
+        const value =
                 (upperCase ? 1 : 0)
                 +
                 (lowerCase ? 1 : 0)
@@ -29,7 +26,14 @@ export default function StrengthMeter({
                 +
                 (symbols ? 1 : 0)
 
-            setStrength(value || 1)
+        if (length < 8) {
+            return setStrength(1)
+        } else if (length > 16) {
+            return setStrength(4)
+        } else {
+            const correctedValue = value + Math.round((length - 8) / 4)
+
+            setStrength(correctedValue > 4 ? 4 : correctedValue)
         }
     }, [length, upperCase, lowerCase, numbers, symbols])
 

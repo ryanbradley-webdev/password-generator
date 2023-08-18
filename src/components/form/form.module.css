@@ -24,6 +24,25 @@
     width: 100%;
 }
 
+.char_length > label {
+    font: var(--font-body-sm);
+}
+
+.char_length > span {
+    font: var(--font-head-md);
+    color: var(--clr-teal);
+}
+
+@media screen and (min-width: 481px) {
+    .char_length > label {
+        font: var(--font-body-md);
+    }
+
+    .char_length > span {
+        font: var(--font-head-lg);
+    }
+}
+
 .length_input {
     appearance: none;
     background: transparent;
