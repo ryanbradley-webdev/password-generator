@@ -1,0 +1,9 @@
+section > div {
+  background-color: var(--clr-dark-grey);
+}
+
+h1 {
+  font: var(--font-body-sm);
+  color: var(--clr-light-grey);
+  margin-bottom: 16px;
+}
