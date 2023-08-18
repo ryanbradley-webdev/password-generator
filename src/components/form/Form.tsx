@@ -64,7 +64,9 @@ export default function Form({
 
             </fieldset>
 
-            <fieldset>
+            <fieldset
+                className={styles.options}
+            >
 
                 <label htmlFor="upper">
 

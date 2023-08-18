@@ -14,3 +14,30 @@
     row-gap: 16px;
     border: none;
 }
+
+.options label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.options input {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: 2px solid var(--clr-white);
+}
+
+.options input:checked {
+    background-color: var(--clr-teal);
+    border: none;
+}
+
+.options label:has(input:checked)::after {
+    content: url('../../assets/icon-check.svg');
+    position: absolute;
+    left: 3px;
+    top: 2px;
+}
