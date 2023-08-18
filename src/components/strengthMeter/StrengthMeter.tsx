@@ -1,8 +1,37 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import styles from './strengthMeter.module.css'
 
-export default function StrengthMeter() {
+export default function StrengthMeter({
+    length,
+    upperCase,
+    lowerCase,
+    numbers,
+    symbols
+}: {
+    length: number
+    upperCase: boolean
+    lowerCase: boolean
+    numbers: boolean
+    symbols: boolean
+}) {
     const [strength, setStrength] = useState(1)
+
+    useEffect(() => {
+        if (length < 8) {
+            return setStrength(1)
+        } else {
+            const value =
+                (upperCase ? 1 : 0)
+                +
+                (lowerCase ? 1 : 0)
+                +
+                (numbers ? 1 : 0)
+                +
+                (symbols ? 1 : 0)
+
+            setStrength(value || 1)
+        }
+    }, [length, upperCase, lowerCase, numbers, symbols])
 
     return (
         <div

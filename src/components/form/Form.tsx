@@ -4,23 +4,32 @@ import StrengthMeter from '../strengthMeter/StrengthMeter'
 import styles from './form.module.css'
 
 export default function Form({
-    length,
-    upperCase,
-    lowerCase,
-    numbers,
-    symbols,
-    setOptions
+    options,
+    setOptions,
+    generatePassword
 }: {
-    length: number
-    upperCase: boolean
-    lowerCase: boolean
-    numbers: boolean
-    symbols: boolean
+    options: Options
     setOptions: Dispatch<SetStateAction<Options>>
+    generatePassword: () => void
 }) {
+    const {
+        length,
+        upperCase,
+        lowerCase,
+        numbers,
+        symbols
+    } = options
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault()
+
+        generatePassword()
+    }
+
     return (
         <form
             className={styles.form}
+            onSubmit={handleSubmit}
         >
 
             <fieldset>
@@ -150,7 +159,9 @@ export default function Form({
 
             </fieldset>
 
-            <StrengthMeter />
+            <StrengthMeter
+                {...options}
+            />
 
             <Button />
 

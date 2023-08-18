@@ -19,3 +19,11 @@ h1 {
   margin-bottom: 16px;
   text-align: center;
 }
+
+.copy {
+  display: flex;
+  height: fit-content;
+  width: fit-content;
+  border: none;
+  background-color: transparent;
+}
