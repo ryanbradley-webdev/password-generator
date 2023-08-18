@@ -50,10 +50,14 @@ h1 {
 
 .copy > span {
   position: absolute;
+  top: 50%;
   right: 37px;
+  transform: translateY(-50%);
+  padding-left: 16px;
   color: var(--clr-teal);
   font: var(--font-body-sm);
-  transition: all 0.1s ease-in-out;
+  background: linear-gradient(to left, var(--clr-dark-grey) 85%, transparent);
+  transition: all 0.2s ease-in-out;
   pointer-events: none;
 }
 
