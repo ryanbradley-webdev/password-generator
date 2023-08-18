@@ -1,6 +1,7 @@
 import Form from './components/form/Form'
 import './App.css'
 import { useState } from 'react'
+import { generateCharSet } from './lib/generateCharSet'
 
 function App() {
   const [options, setOptions] = useState<Options>({
@@ -13,7 +14,21 @@ function App() {
   const [password, setPassword] = useState('')
 
   const generatePassword = () => {
-    setPassword('hello')
+    const charSet = generateCharSet(options)
+
+    if (charSet.length === 0) {
+      return setPassword('')
+    }
+
+    let password = ''
+
+    for (let i = 0; i < options.length; i++) {
+      const charIdx = Math.floor(Math.random() * charSet.length)
+
+      password += charSet[charIdx]
+    }
+
+    setPassword(password)
   }
 
   const copyPassword = () => {
