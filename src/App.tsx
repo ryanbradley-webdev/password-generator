@@ -22,7 +22,7 @@ function App() {
 
       </div>
 
-      <div
+      <form
         className='options'
       >
 
@@ -145,7 +145,7 @@ function App() {
 
         </button>
 
-      </div>
+      </form>
 
     </section>
   )
