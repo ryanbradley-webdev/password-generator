@@ -36,6 +36,7 @@ h1 {
 }
 
 .copy {
+  position: relative;
   display: flex;
   height: fit-content;
   width: fit-content;
@@ -45,4 +46,19 @@ h1 {
 
 .copy:is(:hover, :focus) path {
   fill: var(--clr-white);
+}
+
+.copy > span {
+  position: absolute;
+  right: 37px;
+  color: var(--clr-teal);
+  font: var(--font-body-sm);
+  transition: all 0.1s ease-in-out;
+  pointer-events: none;
+}
+
+@media screen and (min-width: 481px) {
+  .copy > span {
+    font: var(--font-body-md);
+  }
 }

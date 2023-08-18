@@ -26,7 +26,7 @@ export default function StrengthMeter({
                 +
                 (symbols ? 1 : 0)
 
-        if (length < 8) {
+        if (length < 8 || value === 0) {
             return setStrength(1)
         } else if (length > 16) {
             return setStrength(4)
