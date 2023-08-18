@@ -25,3 +25,23 @@
     width: 10px;
     border: 2px solid var(--clr-white);
 }
+
+.segment[data-filled='true'] {
+    border: none;
+}
+
+.segment[data-filled='true'][data-strength='1'] {
+    background-color: var(--clr-red);
+}
+
+.segment[data-filled='true'][data-strength='2'] {
+    background-color: var(--clr-orange);
+}
+
+.segment[data-filled='true'][data-strength='3'] {
+    background-color: var(--clr-yellow);
+}
+
+.segment[data-filled='true'][data-strength='4'] {
+    background-color: var(--clr-teal);
+}
