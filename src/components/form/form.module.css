@@ -1,9 +1,16 @@
 .form {
+    display: grid;
+    row-gap: 16px;
     padding: 16px;
     background-color: var(--clr-dark-grey);
 }
 
+.form > *:not(button) {
+    margin-bottom: 16px;
+}
+
 .form fieldset {
     display: grid;
+    row-gap: 16px;
     border: none;
 }

@@ -3,4 +3,25 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    height: 56px;
+    padding-block: 14px;
+    padding-inline: 16px;
+    background-color: var(--clr-black);
+}
+
+.strength {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.segment_container {
+    display: flex;
+    gap: 8px;
+}
+
+.segment {
+    height: 28px;
+    width: 10px;
+    border: 2px solid var(--clr-white);
 }

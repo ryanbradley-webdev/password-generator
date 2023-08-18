@@ -18,10 +18,27 @@ export default function StrengthMeter() {
                     MEDIUM
                 </span>
 
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+                <div
+                    className={styles.segment_container}
+                >
+
+                    <div
+                        className={styles.segment}
+                    ></div>
+
+                    <div
+                        className={styles.segment}
+                    ></div>
+
+                    <div
+                        className={styles.segment}
+                    ></div>
+
+                    <div
+                        className={styles.segment}
+                    ></div>
+
+                </div>
 
             </div>
 
