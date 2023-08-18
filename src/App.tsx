@@ -1,4 +1,5 @@
 import './App.css'
+import Form from './components/form/Form'
 
 function App() {
   return (
@@ -22,130 +23,7 @@ function App() {
 
       </div>
 
-      <form
-        className='options'
-      >
-
-        <fieldset>
-
-          <div>
-
-            <label htmlFor='length'>
-              Character Length
-            </label>
-
-            <span>
-              10
-            </span>
-
-          </div>
-
-          <input type="range" name="length" id="length" />
-
-        </fieldset>
-
-        <fieldset>
-
-          <label htmlFor="upper">
-
-            <input
-              type="checkbox"
-              name="upper"
-              id="upper"
-              value='upper'
-            />
-
-            <span>
-              Include Uppercase Letters
-            </span>
-
-          </label>
-
-          <label htmlFor="lower">
-
-            <input
-              type="checkbox"
-              name="lower"
-              id="lower"
-              value='lower'
-            />
-
-            <span>
-              Include Lowercase Letters
-            </span>
-
-          </label>
-
-          <label htmlFor="numbers">
-
-            <input
-              type="checkbox"
-              name="numbers"
-              id="numbers"
-              value='numbers'
-            />
-
-            <span>
-              Include Numbers
-            </span>
-
-          </label>
-
-          <label htmlFor="symbols">
-
-            <input
-              type="checkbox"
-              name="symbols"
-              id="symbols"
-              value='symbols'
-            />
-
-            <span>
-              Include Symbols
-            </span>
-
-          </label>
-
-        </fieldset>
-
-        <div
-          className='strength'
-        >
-
-          <span>
-            STRENGTH
-          </span>
-
-          <div
-            className='strength_meter'
-          >
-
-            <span>
-              MEDIUM
-            </span>
-
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-
-          </div>
-
-        </div>
-
-        <button>
-          
-          <span>
-            GENERATE
-          </span>
-
-          <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg">
-            <path fill="#24232C" d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z"/>
-          </svg>
-
-        </button>
-
-      </form>
+      <Form />
 
     </section>
   )

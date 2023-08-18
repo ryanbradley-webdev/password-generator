@@ -47,5 +47,6 @@ main {
 button,
 label,
 input {
+  font-family: inherit;
   cursor: pointer;
 }
