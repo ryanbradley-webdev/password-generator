@@ -1,8 +1,23 @@
+import { Dispatch, SetStateAction } from 'react'
 import Button from '../button/Button'
 import StrengthMeter from '../strengthMeter/StrengthMeter'
 import styles from './form.module.css'
 
-export default function Form() {
+export default function Form({
+    length,
+    upperCase,
+    lowerCase,
+    numbers,
+    symbols,
+    setOptions
+}: {
+    length: number
+    upperCase: boolean
+    lowerCase: boolean
+    numbers: boolean
+    symbols: boolean
+    setOptions: Dispatch<SetStateAction<Options>>
+}) {
     return (
         <form
             className={styles.form}
@@ -17,12 +32,26 @@ export default function Form() {
                     </label>
 
                     <span>
-                        10
+                        {length}
                     </span>
 
                 </div>
 
-                <input type="range" name="length" id="length" />
+                <input
+                    type="range"
+                    name="length"
+                    id="length"
+                    value={length}
+                    min={1}
+                    max={20}
+                    onChange={e => setOptions({
+                        length: Number(e.target.value),
+                        upperCase,
+                        lowerCase,
+                        numbers,
+                        symbols 
+                    })}
+                />
 
             </fieldset>
 
@@ -34,7 +63,14 @@ export default function Form() {
                         type="checkbox"
                         name="upper"
                         id="upper"
-                        value='upper'
+                        checked={upperCase}
+                        onChange={e => setOptions({
+                            length,
+                            upperCase: e.target.checked,
+                            lowerCase,
+                            numbers,
+                            symbols
+                        })}
                     />
 
                     <span>
@@ -50,6 +86,14 @@ export default function Form() {
                         name="lower"
                         id="lower"
                         value='lower'
+                        checked={lowerCase}
+                        onChange={e => setOptions({
+                            length,
+                            upperCase,
+                            lowerCase: e.target.checked,
+                            numbers,
+                            symbols
+                        })}
                     />
 
                     <span>
@@ -65,6 +109,14 @@ export default function Form() {
                         name="numbers"
                         id="numbers"
                         value='numbers'
+                        checked={numbers}
+                        onChange={e => setOptions({
+                            length,
+                            upperCase,
+                            lowerCase,
+                            numbers: e.target.checked,
+                            symbols
+                        })}
                     />
 
                     <span>
@@ -80,6 +132,14 @@ export default function Form() {
                         name="symbols"
                         id="symbols"
                         value='symbols'
+                        checked={symbols}
+                        onChange={e => setOptions({
+                            length,
+                            upperCase,
+                            lowerCase,
+                            numbers,
+                            symbols: e.target.checked
+                        })}
                     />
 
                     <span>

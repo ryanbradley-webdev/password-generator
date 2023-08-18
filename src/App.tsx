@@ -1,7 +1,17 @@
-import './App.css'
 import Form from './components/form/Form'
+import './App.css'
+import { useState } from 'react'
 
 function App() {
+  const [options, setOptions] = useState<Options>({
+    length: 10,
+    upperCase: false,
+    lowerCase: false,
+    numbers: false,
+    symbols: false
+  })
+  const [password, setPassword] = useState('')
+
   return (
     <section>
       
@@ -13,8 +23,12 @@ function App() {
         className='password'
       >
 
-        <span>
-          Password
+        <span
+          style={{
+            opacity: password ? '' : '0.25'
+          }}
+        >
+          {password || 'P4$5W0rD!'}
         </span>
 
         <svg width="21" height="24" xmlns="http://www.w3.org/2000/svg">
@@ -23,7 +37,10 @@ function App() {
 
       </div>
 
-      <Form />
+      <Form
+        {...options}
+        setOptions={setOptions}
+      />
 
     </section>
   )
